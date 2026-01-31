@@ -1,0 +1,163 @@
+/* --- 1. LAYOUT A RESPONSIVITA (Maty úprava) --- */
+
+@media (min-width: 1024px) {
+    .row.banners-row,
+    #dklabBanplusIkony,
+    #dklabBanplusUvod {
+        max-width: 1840px;
+        width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    #dklabBanplusIkony {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        gap: 12px;
+        padding: 0 !important;
+        margin: 0 auto !important;
+        overflow-x: hidden !important;
+    }
+
+    #dklabBanplusIkony .dklabBanplusIkona {
+        flex: 0 0 calc(25% - 12px) !important;
+        max-width: calc(25% - 12px) !important;
+        box-sizing: border-box;
+        margin: 0 !important;
+        text-align: center;
+        float: none !important;
+    }
+
+    #dklabBanplusIkony .dklabBanplusIkona img,
+    #dklabBanplusIkony .dklabBanplusIkona picture {
+        max-width: 100% !important;
+        height: auto !important;
+        display: block;
+        margin: 0 auto;
+    }
+
+    #dklabBanplusUvod {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: flex-start !important;
+        align-items: flex-start;
+        padding: 0 !important;
+        margin: 0 auto !important;
+        overflow-x: hidden;
+        gap: 0;
+    }
+
+    #dklabBanplusUvod .dklabBanplusBox {
+        flex: 0 0 33.3333%; 
+        max-width: 33.3333%;
+        box-sizing: border-box;
+        margin: 0;         
+        padding: 3px;
+        display: block;
+        vertical-align: top;
+    }
+
+    #dklabBanplusUvod .dklabBanplusBox picture,
+    #dklabBanplusUvod .dklabBanplusBox img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+}
+
+/* Úprava pro telefony - centrování a šířka */
+@media (max-width: 768px) {
+    div#dklabBanplusIkony {
+        margin: 0 auto !important;
+    }
+    
+    body {
+        margin-top: 27px; /* Posun stránky dolů */
+    }
+
+    #dklabBanplusUvod { /* Oprava bijících se technologii */
+        width: 102.9% !important;
+        margin-left: -1.5% !important;
+    }
+}
+
+
+/* --- 2. JEMNÉ ZAOBLENÍ ROHŮ (Decentní design) --- */
+
+/* Hlavní bannery a boxy - zmenšeno z 20px na 6px */
+#carousel .carousel-inner,
+#carousel .item img,
+#dklabBanplusIkony,
+#dklabBanplusUvod,
+.dklabBanplusBox,
+.dklabBanplusBox img,
+.footer-banners,
+.footer-banners a,
+.footer-banners img,
+.footer-banners .banner {
+    border-radius: 6px !important;
+    overflow: hidden !important;
+}
+
+/* Tlačítka - zmenšeno z 30px na 4px (profesionálnější vzhled) */
+.btn, 
+button, 
+.siteCookies__button,
+.js-cookiesConsentSubmit,
+#search-form .button,
+.user-action-login .btn,
+.cart-widget .btn,
+.btn-primary,
+.btn-secondary {
+    border-radius: 4px !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Formuláře a inputy - zmenšeno z 15px na 4px */
+.form-control, 
+input[type="text"], 
+input[type="search"], 
+input[type="email"], 
+input[type="password"],
+.search-form {
+    border-radius: 4px !important;
+}
+
+/* Produkty - zmenšeno z 20px na 6px */
+.product, 
+.product-item,
+.p,
+.swiper-slide {
+    border-radius: 6px !important;
+    overflow: hidden !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.product img,
+.p-image img {
+    border-radius: 6px 6px 0 0 !important;
+}
+
+/* Pop-up okna - zmenšeno z 25px na 8px */
+.popup-widget, 
+.login-widget, 
+.cart-widget-inner,
+.siteCookies,
+.ec-v-form {
+    border-radius: 8px !important;
+    overflow: hidden !important;
+}
+
+/* Ostatní drobnosti */
+.flags .flag {
+    border-radius: 2px !important;
+}
+
+.site-msg,
+.information {
+    border-radius: 4px !important;
+}
